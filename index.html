@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p> UI/UX Designer</p>
+                <h1>Hi I'm <span>Vineeth</span><br>Chegonda From Hyderabad</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------about----------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.JPG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>An enthusiastic Full Stack Developer with a strong foundation in both front-end and back-end
+                        technologies. Eager to apply my knowledge and skills to real-world projects, I am passionate
+                        about learning and growing in the field of web development.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links " onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links " onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Core Java</span><br>All basic concepts of java</li>
+                            <li><span>Web Development</span><br>Designing web/App interfaces</li>
+                            <li><span>App Development</span><br>Building Andriod/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>2021 - 2022</span><br>Age and gender prediction camera</li>
+                            <li><span>2022 - 2023</span><br>Web Aplication pages using CRUD</li>
+                            <li><span>2023 - 2024</span><br>E-Commerce websites</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017 - 2019</span><br>MPC from Trinity</li>
+                            <li><span>2019 - 2022</span><br>B.SC-(MECS) from osmania university</li>
+                            <li><span>2023 - 2025</span><br>MCA from JNTUH</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------sevices-------------------------------- -->
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
